@@ -9,7 +9,7 @@ export const TodoList = ({
 }) => {
 	return (
 		<Fragment>
-			<h2 >Listado:</h2>
+			<h2 className='h2Listado'>Listado:</h2>
 		<ul>
 			{todos.map(todo => (
 				<TodoItem

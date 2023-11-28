@@ -27,13 +27,14 @@ export const TodoAdd = ({ handleNewTodo }) => {
 		<form onSubmit={onFormSubmit}> 
 			<input
 				type='text'
+				className='input-add'
 				name='description'
 				value={description}
 				onChange={onInputChange}
 				placeholder='Ingrese una nueva tarea'
 			/>
 
-			<button  type='submit'>
+			<button className='btn-add' type='submit'>
 				+
 			</button>
 		</form>

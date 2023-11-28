@@ -1,4 +1,5 @@
-
+//import { useState } from 'react';
+import './App.css';
 import { TodoAdd } from './components/TodoAdd';
 import { TodoList } from './components/TodoList';
 import { useTodo } from './forms/useTodo';
@@ -17,22 +18,22 @@ function App() {
 
 	return (
 		<>
-			<div >
+			<div className='card-to-do'>
 				<h1>Trabajo Integrador Grupo C </h1>
 				
-				<div >
+				<div className='counter-todos'>
 					<h3>
-						Cantidad de Tareas: <span>{todosCount}</span>
+						Tareas: <span>{todosCount}</span>
 					</h3>
 					<h3>
-						Tareas Pendientes: <span>{pendingTodosCount}</span>
+						Pendientes: <span>{pendingTodosCount}</span>
 					</h3>
 					<h3>
-						Tareas Completadas: <span>{completeCount}</span>
+						Completadas: <span>{completeCount}</span>
 					</h3>
 				</div>
 
-				<div >
+				<div className='add-todo'>
 					
 					<TodoAdd handleNewTodo={handleNewTodo} />
 				</div>

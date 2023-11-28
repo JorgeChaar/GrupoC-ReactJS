@@ -27,6 +27,9 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 		<form onSubmit={onSubmitUpdate}>
 			<input
 				type='text'
+				className={`input-update ${
+					todo.done ? 'text-decoration-dashed' : '' // marca como realizada
+				}`}
 				name='updateDescription'
 				value={updateDescription}
 				onChange={onInputChange}
@@ -35,7 +38,7 @@ export const TodoUpdate = ({ todo, handleUpdateTodo }) => {
 				ref={focusInputRef}
 			/>
 
-			<button  type='submit'>
+			<button className='btn-edit' type='submit'>
 				<FaEdit />
 			</button>
 		</form>

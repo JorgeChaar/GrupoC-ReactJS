@@ -8,18 +8,16 @@ export const TodoItem = ({
 	handleDeleteTodo,
 	handleCompleteTodo,
 }) => {
-
-	
-	
-
-
-
 	return (
 		<li>
-			<button  onClick={() => handleCompleteTodo(todo.id)}>Completada</button>
+			<span onClick={() => handleCompleteTodo(todo.id)}>
+				<label
+					className={`container-done ${todo.done ? 'active' : ''}`} //el condicional para marcarla como completada
+				></label>
+			</span>
 			<TodoUpdate todo={todo} handleUpdateTodo={handleUpdateTodo} />
 			<button
-				
+				className='btn-delete'
 				onClick={() => handleDeleteTodo(todo.id)}
 			>
 				<FaTrash />
